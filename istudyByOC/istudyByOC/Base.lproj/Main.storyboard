@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--我的考试-->
+        <scene sceneID="0ga-94-Tii">
+            <objects>
+                <viewController id="nmI-zG-iVu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mh6-3R-lfn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hGL-Bq-Tr2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的考试" id="SEU-4v-LVy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09A-7l-jGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802.89855072463774" y="121.875"/>
+        </scene>
+        <!--个人中心-->
+        <scene sceneID="F7p-zM-RWQ">
+            <objects>
+                <viewController id="Sfy-lD-x7C" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="18Q-nU-OPC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Nqo-u7-Sfi"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人中心" id="uTX-Xd-rlR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbL-si-CpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711.5942028985507" y="-1390.1785714285713"/>
+        </scene>
+        <!--我的课程-->
+        <scene sceneID="jGe-am-6GH">
+            <objects>
+                <viewController id="nCl-HN-iLK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cfi-MV-Hb2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="knA-lL-LVJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的课程" id="gWL-Gf-JsN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRj-25-grv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802.89855072463774" y="-528.34821428571422"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0cm-r2-JfE">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBarVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Scd-yh-8jy" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="24Y-tF-ptT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0x5-88-Cc2" kind="relationship" relationship="viewControllers" id="goP-Y5-amW"/>
+                        <segue destination="gGc-JT-Pe0" kind="relationship" relationship="viewControllers" id="RWV-Ak-A5L"/>
+                        <segue destination="ZlI-tX-BtP" kind="relationship" relationship="viewControllers" id="6t0-zw-1Wv"/>
+                        <segue destination="cER-4m-RYV" kind="relationship" relationship="viewControllers" id="c9y-UJ-imH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibJ-wP-jxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1025" y="-205"/>
+        </scene>
+        <!--我的课程-->
+        <scene sceneID="LJF-gp-uXA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0x5-88-Cc2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的课程" image="我的课程" id="DRu-rq-h5D"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7zN-Yq-2Ad">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nCl-HN-iLK" kind="relationship" relationship="rootViewController" id="owv-7o-OG4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZz-WQ-WfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-107.24637681159422" y="-528.34821428571422"/>
+        </scene>
+        <!--我的考试-->
+        <scene sceneID="CDk-IW-64G">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gGc-JT-Pe0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的考试" image="我的考试未选中" id="E0u-z5-ckE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ehn-zC-jYH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nmI-zG-iVu" kind="relationship" relationship="rootViewController" id="ewx-ez-Iuf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jqu-5s-JiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-107.24637681159422" y="121.875"/>
+        </scene>
+        <!--站内信-->
+        <scene sceneID="aEI-0e-CQE">
+            <objects>
+                <viewController id="Kh6-y6-knN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nDL-48-khh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="iWv-cN-Adl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="站内信" id="aX5-6I-md1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HlL-zn-Qul" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="931.88405797101461" y="791.51785714285711"/>
+        </scene>
+        <!--站内信-->
+        <scene sceneID="NMY-ka-BXf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZlI-tX-BtP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="站内信" image="站内信" id="3ct-Wt-Ymz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pBF-u6-eXh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kh6-y6-knN" kind="relationship" relationship="rootViewController" id="CFu-GC-994"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zmn-mc-ryP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-386" y="837"/>
+        </scene>
+        <!--个人中心-->
+        <scene sceneID="4oC-0a-jN6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cER-4m-RYV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="个人中心" image="个人信息" id="VqM-WZ-ebj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AYZ-1e-Ofr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Sfy-lD-x7C" kind="relationship" relationship="rootViewController" id="lXP-ye-zQv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c12-NW-2A0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801.44927536231887" y="-1390.1785714285713"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="个人信息" width="32" height="32"/>
+        <image name="我的考试未选中" width="28" height="28"/>
+        <image name="我的课程" width="32" height="32"/>
+        <image name="站内信" width="27" height="23.5"/>
+    </resources>
+</document>
