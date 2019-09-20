@@ -261,7 +261,7 @@
 	CGPoint center = CGPointMake(screen.size.width/2, (screen.size.height-heightKeyboard)/2);
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	[UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
-		hud.center = CGPointMake(center.x, center.y);
+        self->hud.center = CGPointMake(center.x, center.y);
 	} completion:nil];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	if (background != nil) background.frame = window.frame;
@@ -310,8 +310,8 @@
 
 		NSUInteger options = UIViewAnimationOptionAllowUserInteraction | UIViewAnimationCurveEaseOut;
 		[UIView animateWithDuration:0.15 delay:0 options:options animations:^{
-			hud.transform = CGAffineTransformScale(hud.transform, 1/1.4, 1/1.4);
-			hud.alpha = 1;
+            hud.transform = CGAffineTransformScale(self->hud.transform, 1/1.4, 1/1.4);
+            self->hud.alpha = 1;
 		} completion:nil];
 	}
 }
@@ -324,8 +324,8 @@
 	{
 		NSUInteger options = UIViewAnimationOptionAllowUserInteraction | UIViewAnimationCurveEaseIn;
 		[UIView animateWithDuration:0.15 delay:0 options:options animations:^{
-			hud.transform = CGAffineTransformScale(hud.transform, 0.7, 0.7);
-			hud.alpha = 0;
+            hud.transform = CGAffineTransformScale(self->hud.transform, 0.7, 0.7);
+            self->hud.alpha = 0;
 		}
 		completion:^(BOOL finished) {
 			[self hudDestroy];

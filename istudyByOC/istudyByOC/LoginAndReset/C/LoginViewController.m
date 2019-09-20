@@ -33,8 +33,7 @@
 
     NSString *userName =  self.UserNameTextField.text;
     NSString *password = self.passWordTextField.text;
-    NSLog(@"%@",userName);
-    NSLog(@"%@",password);
+   
     NSDictionary *parameters = @{@"username":userName,
                                  @"password":password,
                                  @"devicetoken":@"",
@@ -49,25 +48,24 @@
        // [ProgressHUD dismiss];
         NSLog(@"%@",responseObject);
         if(([responseObject[@"retcode"] intValue]) == 0){
-
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         //设置userDefaults
-        [userDefaults setValue:responseObject[@"authtoken"] forKey:@"authtoken"];
-        [userDefaults setValue:userName forKey: @"userName"];
-        [userDefaults setValue:password forKey: @"passWord"];
-        [userDefaults setValue:responseObject[@"info"][@"name"] forKey: @"name"];
-        [userDefaults setValue:responseObject[@"info"][@"gender"] forKey: @"gender"];
-        [userDefaults setValue:responseObject[@"info"][@"cls"] forKey: @"cls"];
+            [self setUserDefaultsValue:responseObject[@"authtoken"] key:@"authtoken"];
+            [self setUserDefaultsValue:userName key:@"userName"];
+            [self setUserDefaultsValue:password key:@"passWord"];
+            [self setUserDefaultsValue:responseObject[@"info"][@"name"]  key:@"name"];
+            [self setUserDefaultsValue:responseObject[@"info"][@"gender"]  key:@"gender"];
+            [self setUserDefaultsValue:responseObject[@"info"][@"cls"]  key:@"cls"];
+      
         
-//           [userDefaults setValue:responseObject[@"info"][@"phone"] forKey: @"phone"];
-//            [userDefaults setValue:responseObject[@"info"][@"email"] forKey: @"email"];
-//        //qq 邮编 地址栏的设置
-//             [userDefaults setValue:responseObject[@"info"][@"addr"] forKey: @"address"];
-//        [userDefaults setValue:responseObject[@"info"][@"qq"] forKey: @"QQNumber"];
-//                                                       [userDefaults setValue:responseObject[@"info"][@"zipcode"] forKey: @"postCode"];
-//
-//        //设置头像
-//            [userDefaults setValue:responseObject[@"info"][@"avtarurl"] forKey: @"avtarurl"];
+           [self setUserDefaultsValue:responseObject[@"info"][@"phone"] key:@"phone"];
+            [self setUserDefaultsValue:responseObject[@"info"][@"email"] key: @"email"];
+        //qq 邮编 地址栏的设置
+             [self setUserDefaultsValue:responseObject[@"info"][@"addr"] key: @"address"];
+        [self setUserDefaultsValue:responseObject[@"info"][@"qq"] key: @"QQNumber"];
+        [self setUserDefaultsValue:responseObject[@"info"][@"zipcode"] key: @"postCode"];
+
+        //设置头像
+            [self setUserDefaultsValue:responseObject[@"info"][@"avtarurl"] key: @"avtarurl"];
         
         
         
@@ -77,7 +75,7 @@
         UITabBarController *tabBatVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"tabBarVC"];
         [self presentViewController:tabBatVC animated:true completion:nil];
         }else{
-            NSLog(@"123");
+           
             [ProgressHUD showError:@"登录失败"];
 
         }
@@ -92,7 +90,15 @@
     [self.UserNameTextField resignFirstResponder];
     [self.passWordTextField resignFirstResponder];
 }
-
+    -(void)setUserDefaultsValue:(NSString *)value key:(NSString *)key{
+     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if([value isKindOfClass:[NSNull class]]){
+         [userDefaults setValue:@"" forKey:key];
+       
+    }else{
+        [userDefaults setValue:value forKey:key];
+    }
+}
 /*
 #pragma mark - Navigation
 
