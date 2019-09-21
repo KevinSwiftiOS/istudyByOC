@@ -18,7 +18,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UIStoryboard *loginStoryboard = [UIStoryboard storyboardWithName:@"LoginAndReset" bundle:nil];
     UINavigationController *loginNavVC = [loginStoryboard instantiateViewControllerWithIdentifier:@"LoginNavigationVC"];
-    self.window.rootViewController = loginNavVC;
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UITabBarController *tabBarVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"tabBarVC"];
+    
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if([userDefaults valueForKey:@"authtoken"] == nil){
+          self.window.rootViewController = loginNavVC;
+    }else{
+          self.window.rootViewController = tabBarVC;
+    }
+    
+    
+  
     // Override point for customization after application launch.
     return YES;
 }

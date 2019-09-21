@@ -3,6 +3,6 @@ use_frameworks!
 
 target 'istudyByOC' do
   pod 'AFNetworking', '~>2.0'
-  
+  pod 'DZNEmptyDataSet', '~>1.0'
 end
 

@@ -93,7 +93,9 @@
     -(void)setUserDefaultsValue:(NSString *)value key:(NSString *)key{
      NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if([value isKindOfClass:[NSNull class]]){
-         [userDefaults setValue:@"" forKey:key];
+     
+        [userDefaults setValue:nil forKey:key] ;
+   
        
     }else{
         [userDefaults setValue:value forKey:key];
